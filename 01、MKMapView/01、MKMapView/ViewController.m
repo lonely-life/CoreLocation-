@@ -38,7 +38,7 @@
      MKMapTypeHybridFlyover**/
     
     // 设置地图的样式
-    self.mapView.mapType = MKMapTypeHybridFlyover;
+    self.mapView.mapType = MKMapTypeStandard;
     
     // 是否显示用户位置
     self.mapView.showsUserLocation = YES;
@@ -72,7 +72,7 @@
             kCLLocationAccuracyKilometer;          //错误偏差1公里以内
             kCLLocationAccuracyThreeKilometers;    //错误偏差3公里以内
          */
-        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
         
         // 多远距离更新位置
         _locationManager.distanceFilter = 10;
